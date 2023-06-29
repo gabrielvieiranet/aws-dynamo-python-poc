@@ -2,12 +2,14 @@
 
 Teste de conexão de API com DynamoDB.
 
-Dentro de infra tem uma config para criar uma tabela simples no DynamoDB
-Dentro de app fica um código em Python de um serverzinho em Flask para interagir com essa tabela.
+Dentro de infra tem uma config para criar uma tabela simples no DynamoDB utilizando Terraform
+
+Dentro de app fica um código em Python de um serverzinho em Flask para interagir com essa tabela
 
 ## Crie uma configuração para acesso ao ambiente de sua conta AWS
 
 Precisamos de uma credencial para que nosso código se conecte no ambiente AWS.
+
 Como pré requisito, já é esperado que você tenha uma conta AWS Free Tier configurada.
 
 Depois disso, logue na sua conta AWS e lá em IAM / Users, crie um usuário com perfil ADMIN.
@@ -17,14 +19,14 @@ Ela possui dois valores. Guarde bem esses valores e não compartilhe.
 
 Agora para configurar a Access Key no ambiente, crie o diretório ~/.aws com dois arquivos (segue meu exemplo):
 
-~/.aws/config
+**~/.aws/config**
 ```
 [default]
 region = us-east-2
 output = json
 ```
 
-~/.aws/credentials
+**~/.aws/credentials**
 ```
 [default]
 aws_access_key_id=********************
